@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Reservas</title>
-    <link href="css\app.css" rel="stylesheet">        
+    <link href="css/app.css" rel="stylesheet">        
         
     </head>
     <body style="background-color: #f5ebe0">
@@ -16,13 +16,13 @@
         <header id="header" class="header fixed-top d-flex align-items-center">
             <div class="container d-flex align-items-center justify-content-between">
                 <a href="main.page.html" class="logo d-flex align-items-center me-auto -me-lg-0">
-                    <h1>Restaurante<span>.</span></h1>
+                    <h1>Restaurante</h1>
                 </a>
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a href="reservations\edit.blade.php">Edita tus reservas</a></li>
-                        <li><a href="reservations\show.blade.php">Mira tus reservas</a></li>
+                        <li><a href="reservations\edit.blade.php">Modifica tu reserva</a></li>
+                        <li><a href="reservations\show.blade.php">Revisa tu reserva</a></li>
                     </ul>
                 </nav>
                 <a class="btn-reserva" href="reservations/create.blade.php">Nueva reserva</a>
@@ -34,12 +34,16 @@
                 <div class="row justify-content-between gy-5">
                   <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
                     <h2 data-aos="fade-up">Disfruta de una comida sana<br>y deliciosa</h2>
-                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                      <a href="reservations/create.blade.php" class="btn-reserva-ahora">Reserva ahora!</a>
+                    <div class="d-flex gap-2 col-6 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                      <a href="reservations/create.blade.php" class="btn btn-primary btn-lg">HAZ TU RESERVA</a>
                     </div>
-                  </div>
+                    
+  
+                    
+</div>
+                 
                   <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-            <img src="images\hero-img.png" class="center-img">
+                    <img src="images\hero-img.png" class="center-img">
                   </div>
         </section>
         
