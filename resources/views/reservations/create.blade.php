@@ -17,7 +17,7 @@
 <header id="header" class="header  align-items-center">
             <div class="container  justify-content-between">
                 <a href="" class="logo d-flex align-items-center ">
-                    <h1>Restaurante</h1>
+                   
                 </a>
 
                 
@@ -83,7 +83,7 @@
                 <div class="col">
                 
                     <button type="submit" class="btn btn-primary btn-lg">Reservar</button>
-                    <button><a href="../welcome.blade.php">Volver a la página principal</a></button>
+                    <button class="btn btn-info"><a href="/reservations">Volver a la página principal</a></button>
                 
                 </div>
             </div>

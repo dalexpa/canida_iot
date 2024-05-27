@@ -16,5 +16,6 @@ use App\Http\Controllers\ReservationController;
 
 
 
-
+Route::get('/', [ReservationController::class, 'index'])->name('Index');
 Route::resource('reservations', ReservationController::class);
+

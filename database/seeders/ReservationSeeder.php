@@ -17,17 +17,23 @@ class ReservationSeeder extends Seeder
     public function run(): void
     {
          // Crear o asegurar la existencia de dos mesas
-         $table1 = Table::firstOrCreate(['name' => 'Mesa 1']);
-         $table2 = Table::firstOrCreate(['name' => 'Mesa 2']);
- 
-         // Crear una reservación
-         Reservation::create([
-             'table_id' => $table1->id,
-             'customer_name' => 'John Doe',
-             'customer_email' => 'john.doe@example.com',
-             'customer_phone' => '1234567890',
-             'date' => Carbon::today()->toDateString(),
-             'hour' => Carbon::now()->format('H:i'),
-         ]);
+        $table1 = Table::firstOrCreate(
+            ['name' => 'Mesa 1'],
+            ['seats' => 4]
+        );
+        $table2 = Table::firstOrCreate(
+            ['name' => 'Mesa 2'],
+            ['seats' => 4]
+        );
+
+        // Crear una reservación
+        Reservation::create([
+            'table_id' => $table1->id,
+            'customer_name' => 'John Doe',
+            'customer_email' => 'john.doe@gmail.com',
+            'customer_phone' => '1234567890',
+            'date' => Carbon::today()->toDateString(),
+            'hour' => Carbon::now()->format('H:i'),
+        ]);
     }
 }
