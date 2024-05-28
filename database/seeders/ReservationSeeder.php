@@ -30,6 +30,7 @@ class ReservationSeeder extends Seeder
         Reservation::create([
             'table_id' => $table1->id,
             'customer_name' => 'John Doe',
+            'customer_seats' => '123456789',
             'customer_email' => 'john.doe@gmail.com',
             'customer_phone' => '1234567890',
             'date' => Carbon::today()->toDateString(),

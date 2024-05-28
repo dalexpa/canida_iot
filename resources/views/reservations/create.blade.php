@@ -37,6 +37,14 @@
         </select>
                 </div>
                 <div class="col">
+                <label for="table_seats">Personas:</label>
+        <select name="table_seats" id="table_seats">
+            @foreach($tables as $table)
+                <option value="{{ $table->seats }}">{{ $table->seats }}</option>
+            @endforeach
+        </select>
+                </div>
+                <div class="col">
 
                 </div>
             </div>
