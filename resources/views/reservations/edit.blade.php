@@ -7,9 +7,15 @@
     <title>Editar Reserva</title>
 </head>
 <body>
-    <h1>Editar Reserva</h1>
+    <style>
+        a{
+            text-decoration: none;
+            list-style: none;
+        }
+    </style>
+    <h1 class="text-center">Editar Reserva</h1>
     <div class="container">
-    <form action="{{ route('reservations.update', $reservation) }}" method="POST">
+    <form class ="form-control grid gap-3" action="{{ route('reservations.update', $reservation) }}" method="POST">
         @csrf
         @method('PUT')
         <label for="table_id">Mesa:</label>
@@ -18,24 +24,43 @@
                 <option value="{{ $table->id }}" {{ $table->id == $reservation->table_id ? 'selected' : '' }}>{{ $table->name }}</option>
             @endforeach
         </select>
-        <br>
-        <label for="customer_name">Nombre del Cliente:</label>
-        <input type="text" name="customer_name" id="customer_name" value="{{ old('customer_name', $reservation->customer_name) }}">
-        <br>
-        <label for="customer_email">Email del Cliente:</label>
-        <input type="email" name="customer_email" id="customer_email" value="{{ old('customer_email', $reservation->customer_email) }}">
-        <br>
-        <label for="customer_phone">Teléfono del Cliente:</label>
-        <input type="text" name="customer_phone" id="customer_phone" value="{{ old('customer_phone', $reservation->customer_phone) }}">
-        <br>
-        <label for="date">Fecha:</label>
-        <input type="date" name="date" id="date" value="{{ old('date', $reservation->date) }}">
-        <br>
-        <label for="hour">Hora:</label>
-        <input type="time" name="hour" id="hour" value="{{ old('hour', $reservation->hour) }}">
-        <br>
-        <button type="submit">Actualizar</button>
-        <button><a href="/reservations">Volver a la página principal</a></button>
+        <div class="row">
+            <div class="col">
+                <label for="customer_name">Nombre del Cliente:</label>
+                <input type="text" name="customer_name" id="customer_name" value="{{ old('customer_name', $reservation->customer_name) }}">
+            </div>
+        
+            <div class="col">
+                <label for="customer_email">Email del Cliente:</label>
+                <input type="email" name="customer_email" id="customer_email" value="{{ old('customer_email', $reservation->customer_email) }}">
+            </div>
+        
+            <div class="col">
+                <label for="customer_phone">Teléfono del Cliente:</label>
+                <input type="text" name="customer_phone" id="customer_phone" value="{{ old('customer_phone', $reservation->customer_phone) }}">
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col">
+                <label for="date">Fecha:</label>
+                <input type="date" name="date" id="date" value="{{ old('date', $reservation->date) }}">
+            </div>
+            <div class="col">
+            <label for="hour">Hora:</label>
+            <input type="time" name="hour" id="hour" value="{{ old('hour', $reservation->hour) }}">
+            </div>
+        </div>
+       
+       
+        <div class="row">
+            <div class="col">
+        <button class = "btn btn-success" type="submit">Actualizar</button>
+        <button class=" btn btn-light"><a href="/reservations">Volver a la página principal</a></button>
+        </div>
+        </div>
+       
+        
     </form>
     </div>
 </body>
