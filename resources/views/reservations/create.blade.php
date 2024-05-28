@@ -8,18 +8,14 @@
     <title>Nueva Reserva</title>
 </head>
 <body>
-    <style>
-        body{
-            
-        }
-    </style>
+    
 
 <header id="header" class="header  align-items-center">
             <div class="container  justify-content-between">
                 <a href="" class="logo d-flex align-items-center ">
                    
                 </a>
-
+                <h1>Sistema de Reservas</h1>
                 
             </div>
         </header>

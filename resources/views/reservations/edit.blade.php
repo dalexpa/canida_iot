@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Editar Reserva</h1>
+    <div class="container">
     <form action="{{ route('reservations.update', $reservation) }}" method="POST">
         @csrf
         @method('PUT')
@@ -36,5 +37,6 @@
         <button type="submit">Actualizar</button>
         <button><a href="/reservations">Volver a la página principal</a></button>
     </form>
+    </div>
 </body>
 </html>
