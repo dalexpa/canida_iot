@@ -23,6 +23,12 @@
             @foreach($tables as $table)
                 <option value="{{ $table->id }}" {{ $table->id == $reservation->table_id ? 'selected' : '' }}>{{ $table->name }}</option>
             @endforeach
+        </select> <br>
+        <label for="table_seats">Número de personas personas:</label>
+        <select name="table_seats" id="table_seats">
+            @foreach($tables as $table)
+                 <option value="{{ $table->seats }}" {{ $table->seats == $reservation->table_seats ? 'selected' : '' }}>{{ $table->seats }}</option>
+            @endforeach
         </select>
         <div class="row">
             <div class="col">
